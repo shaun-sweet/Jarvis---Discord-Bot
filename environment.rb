@@ -4,6 +4,11 @@ require 'active_record'
 require 'sqlite3'
 require 'nokogiri'
 require './apikeys.rb'
+require "net/http"
+require "uri"
+require "json"
+require 'discordrb'
+
 ActiveRecord::Base.establish_connection(
 	adapter: 'sqlite3',
 	username: 'root',
@@ -16,5 +21,8 @@ Dir.glob('./lib/*.rb').each do |ruby_file|
 	require ruby_file
 end
 
+Dir.glob("./lib/abilities/*.rb") do |ruby_file|
+	require ruby_file
+end
 
 
