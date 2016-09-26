@@ -1,4 +1,3 @@
 source 'https://rubygems.org'
-gem 'nokogiri'
+gem 'mw_dictionary_api'
 gem 'discordrb'
-gem 'activerecord'
