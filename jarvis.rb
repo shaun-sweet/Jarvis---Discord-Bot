@@ -32,8 +32,8 @@ bot.command :remove do |event, user, role|
 end
 
 bot.command :define do |event, word|	
-		p response = $dictionary.search(word).entries[0][:definitions].first[:text][1..-1]
-		response.slice(0..(response.index(":")) - 1)
+		p response = $dictionary.search(word).entries[0][:definitions].first[:text]
+		response.slice(1..response.index(":") - 1)
 end
 
 bot.run
